@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  ~ This file is part of OpenSpaceBox.
+  ~ Copyright (C) 2019 by Yuri Becker <hi@yuri.li>
+  ~
+  ~ OpenSpaceBox is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ OpenSpaceBox is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with OpenSpaceBox.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<SectorTemplate id="another_test_sector">
+    <Dimensions xMin="-50" yMin="-50" xMax="50" yMax="50"/>
+    <Background textureAsset="BACKGROUND_BLACK" width="256" height="256"/>
+    <Stations>
+        <Station stationType="solar_cell_array" x="-2000" y="0" rotation="16" faction="faction_002"/>
+    </Stations>
+    <SectorBeacons>
+        <SectorBeacon x="-2600" y="600"/>
+    </SectorBeacons>
+</SectorTemplate>

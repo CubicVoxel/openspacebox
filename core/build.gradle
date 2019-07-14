@@ -1,0 +1,58 @@
+/*
+ * This file is part of OpenSpaceBox.
+ * Copyright (C) 2019 by Yuri Becker <hi@yuri.li>
+ *
+ * OpenSpaceBox is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * OpenSpaceBox is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with OpenSpaceBox.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    
+    dependencies {
+        classpath "me.tatarka:gradle-retrolambda:$retrolambdaVersion"
+    }
+
+}
+
+apply plugin: 'java'
+apply plugin: 'me.tatarka.retrolambda'
+
+sourceCompatibility = 1.8
+sourceSets.main.java.srcDirs = ['src/']
+sourceSets.test.java.srcDirs = ['test/']
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+dependencies {
+    // libGdx
+    compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+    //
+    compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    // StreamSupport
+    compile 'net.sourceforge.streamsupport:streamsupport:1.5.2'
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.16.10'
+    // Guava
+    compile 'com.google.guava:guava:20.0'
+    // SimpleXML
+    compile('org.simpleframework:simple-xml:2.7.1') {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    // Test
+    testCompile 'junit:junit:4.12'
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ This file is part of OpenSpaceBox.
+  ~ Copyright (C) 2019 by Yuri Becker <hi@yuri.li>
+  ~
+  ~ OpenSpaceBox is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ OpenSpaceBox is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with OpenSpaceBox.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<Universe id="default">
+    <Factions>
+        <Faction id="faction_001" walletBalance="1000">
+            <Name>Cool People</Name>
+        </Faction>
+        <Faction id="faction_002" walletBalance="200">
+            <Name>Slightly uncooler people</Name>
+        </Faction>
+    </Factions>
+    <Sectors>
+        <Sector id="test_sector_001" template="test_sector" x="1000" y="200">
+            <DisplayName>Gemini</DisplayName>
+        </Sector>
+        <Sector id="another_test_sector_001" template="another_test_sector" x="600" y="100">
+            <DisplayName>Aquila</DisplayName>
+        </Sector>
+        <Sector id="third_test_sector_001" template="third_test_sector" x="300" y="250">
+            <DisplayName>Perseus</DisplayName>
+        </Sector>
+    </Sectors>
+    <SectorConnections>
+        <SectorConnection a="test_sector_001" b="another_test_sector_001"/>
+        <SectorConnection a="test_sector_001" b="another_test_sector_002"/>
+    </SectorConnections>
+</Universe>

@@ -1,0 +1,59 @@
+/*
+ * This file is part of OpenSpaceBox.
+ * Copyright (C) 2019 by Yuri Becker <hi@yuri.li>
+ *
+ * OpenSpaceBox is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * OpenSpaceBox is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with OpenSpaceBox.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+sourceSets.main.java.srcDirs = ["src/"]
+project.ext {
+    assetsDir = rootProject.project(':android').file('assets')
+    mainClassName = 'DesktopLauncher'
+}
+
+run {
+    dependsOn 'classes'
+    main = mainClassName
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    workingDir = assetsDir
+    ignoreExitValue = true
+}
+
+task dist(type: Jar) {
+
+    from files(sourceSets.main.output.classesDir)
+    from files(sourceSets.main.output.resourcesDir)
+    from { configurations.compile.collect { zipTree(it) } }
+    from files(assetsDir)
+
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+dist.dependsOn classes
+
+dependencies {
+    compile project(':core')
+    //
+    compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+    //
+    compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    //
+    compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+}

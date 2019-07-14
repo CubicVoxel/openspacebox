@@ -1,0 +1,58 @@
+/*
+ * This file is part of OpenSpaceBox.
+ * Copyright (C) 2019 by Yuri Becker <hi@yuri.li>
+ *
+ * OpenSpaceBox is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * OpenSpaceBox is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with OpenSpaceBox.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'RealmDesigner'
+
+project.ext {
+    assetsDir = rootProject.project(':android').file('assets')
+}
+
+dependencies {
+    //
+    compile project(path: ':workspacefx')
+    //
+    compile project(path: ':core')
+    //
+    compile "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+    //
+    compile "com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion"
+    //
+    compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    // 
+    compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+    //
+    compileOnly "org.projectlombok:lombok:1.16.10"
+    //
+    compile 'org.apache.commons:commons-lang3:3.5'
+}
+
+task runDebug(type: JavaExec) {
+    debug true 
+}
+
+configure([run, runDebug]) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = mainClassName
+    args += "assetsDir=\"$assetsDir\""
+}

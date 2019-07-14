@@ -1,0 +1,191 @@
+/*
+ * This file is part of OpenSpaceBox.
+ * Copyright (C) 2019 by Yuri Becker <hi@yuri.li>
+ *
+ * OpenSpaceBox is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * OpenSpaceBox is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with OpenSpaceBox.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.label {
+    -fx-text-fill: #dddddd;
+}
+
+.button {
+    -fx-background-color: #595959;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-background-insets: 0;
+
+    -fx-border-style: solid;
+    -fx-border-color: #808080;
+    -fx-border-radius: 2px;
+}
+
+.button:pressed {
+    -fx-background-color: #797979;
+
+    -fx-border-radius: 5px;
+}
+
+.toggle-button {
+    -fx-background-color: #595959;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-background-insets: 1px;
+    -fx-label-padding: 5px;
+
+    -fx-border-style: solid;
+    -fx-border-color: #808080;
+    -fx-border-radius: 2px;
+}
+
+.toggle-button:pressed {
+    -fx-background-color: #797979;
+    -fx-border-radius: 5px;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #797979;
+}
+
+.text-field {
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: #dddddd;
+
+    -fx-border-style: solid;
+    -fx-border-color: #808080;
+    -fx-border-radius: 2px;
+}
+
+.text-area {
+    -fx-text-fill: #dddddd;
+
+    -fx-border-style: solid;
+    -fx-border-color: #808080;
+    -fx-border-radius: 2px;
+}
+
+.text-area .content {
+    -fx-background-color: #1d1d1d;
+}
+
+.check-box .box {
+    -fx-background-color: #1d1d1d;
+
+    -fx-border-style: solid;
+    -fx-border-color: #808080;
+    -fx-border-radius: 2px;
+
+    -fx-cursor: hand;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #dddddd;
+}
+
+.popup-control {
+    -fx-background-color: #383838;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-padding: 0;
+    -fx-effect: none;
+}
+
+.list-cell {
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: #dddddd;
+
+    -fx-cursor: hand;
+}
+
+.list-cell:selected {
+    -fx-background-color: #797979;
+}
+
+.list-view {
+    -fx-background-color: #1d1d1d;
+
+    -fx-border-style: solid;
+    -fx-border-color: #808080;
+    -fx-border-radius: 2px;
+}
+
+.context-menu {
+    -fx-background-color: #383838;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-padding: 0;
+    -fx-effect: none;
+}
+
+.combo-box {
+    -fx-border-style: solid;
+    -fx-border-color: #808080;
+    -fx-border-radius: 2px;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: #dddddd;
+}
+
+.combo-box .text-input {
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: #dddddd;
+}
+
+.combo-box .combo-box-popup {
+    -fx-background-color: #383838;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-padding: 0;
+    -fx-effect: none;
+}
+
+.menu-bar {
+    -fx-background-color: #515151;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-padding: 0;
+}
+
+.menu {
+    -fx-background-color: #383838;
+}
+
+.menu:showing {
+    -fx-background-color: #797979;
+}
+
+.menu-item {
+    -fx-background-color: #5b5b5b;
+    -fx-text-fill: black;
+
+    -fx-effect: none;
+}
+
+.menu-item:focused {
+    -fx-background-color: #797979;
+}
+
+.dialog-pane {
+    -fx-background-color: #383838;
+}
+
+.dialog-pane:header *.header-panel {
+    -fx-background-color: #2b2b2b;
+}

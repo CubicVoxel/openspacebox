@@ -1,0 +1,270 @@
+<!--
+  ~ This file is part of OpenSpaceBox.
+  ~ Copyright (C) 2019 by Yuri Becker <hi@yuri.li>
+  ~
+  ~ OpenSpaceBox is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ OpenSpaceBox is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with OpenSpaceBox.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<TypeDefinitions>
+    <ShipTypes class="java.util.ArrayList">
+        <ShipType id="test_ship_a">
+            <DisplayName>Test Ship</DisplayName>
+            <CargoSpace>50</CargoSpace>
+            <Physics maxSpeed="620.0" acceleration="1000.5" deceleration="1.3" rotationSpeed="720.0"/>
+            <SpriteAtlas>SHIP_RED_B</SpriteAtlas>
+        </ShipType>
+        <ShipType id="test_ship_b">
+            <DisplayName>Test Ship G</DisplayName>
+            <CargoSpace>100</CargoSpace>
+            <Physics maxSpeed="355.0" acceleration="300.0" deceleration="0.42" rotationSpeed="200.0"/>
+            <SpriteAtlas>SHIP_BLUE_D</SpriteAtlas>
+        </ShipType>
+    </ShipTypes>
+    <StationTypes class="java.util.ArrayList">
+        <StationType id="cell_manufactory">
+            <DisplayName>Cell Manufactory</DisplayName>
+            <Description>Cell Manufactory</Description>
+            <SpriteAtlas>STATION_FACTORY</SpriteAtlas>
+            <Size width="620.0" height="1735.0"/>
+            <CargoSpace>2000</CargoSpace>
+            <StorageAllocations class="java.util.ArrayList">
+                <StorageAllocation item="common_metals" size="900"/>
+                <StorageAllocation item="energy_cell" size="150"/>
+                <StorageAllocation item="food_ration" size="150"/>
+                <StorageAllocation item="charged_energy_cell" size="800"/>
+            </StorageAllocations>
+            <Productions class="java.util.ArrayList">
+                <Production duration="60.0">
+                    <Inputs class="java.util.ArrayList">
+                        <Resource item="common_metals" amount="1"/>
+                        <Resource item="food_ration" amount="4"/>
+                        <Resource item="charged_energy_cell" amount="4"/>
+                    </Inputs>
+                    <Outputs class="java.util.ArrayList">
+                        <Resource item="energy_cell" amount="19"/>
+                    </Outputs>
+                </Production>
+            </Productions>
+        </StationType>
+        <StationType id="solar_cell_array">
+            <DisplayName>Solar Cell Array</DisplayName>
+            <Description>Solar Cell Array</Description>
+            <SpriteAtlas>STATION_SOLARPLANT</SpriteAtlas>
+            <Size width="860.0" height="1440.0"/>
+            <CargoSpace>2000</CargoSpace>
+            <StorageAllocations class="java.util.ArrayList">
+                <StorageAllocation item="charged_energy_cell" size="750"/>
+                <StorageAllocation item="energy_cell" size="500"/>
+                <StorageAllocation item="food_ration" size="750"/>
+            </StorageAllocations>
+            <Productions class="java.util.ArrayList">
+                <Production duration="18.0">
+                    <Inputs class="java.util.ArrayList">
+                        <Resource item="energy_cell" amount="1"/>
+                        <Resource item="food_ration" amount="2"/>
+                    </Inputs>
+                    <Outputs class="java.util.ArrayList">
+                        <Resource item="charged_energy_cell" amount="2"/>
+                    </Outputs>
+                </Production>
+            </Productions>
+        </StationType>
+    </StationTypes>
+    <ItemTypes class="java.util.ArrayList">
+        <ItemType id="common_metals">
+            <DisplayName>Common Metals</DisplayName>
+            <Description>Common Metals are found in asteroids which can be mined with the Mining Laser Alpha. They are
+                an essential commodity and one of the most used resources.
+            </Description>
+            <Size>5</Size>
+            <Price>20.0</Price>
+        </ItemType>
+        <ItemType id="precious_metals">
+            <DisplayName>Precious Metals</DisplayName>
+            <Description>Precious Metals are found in some asteroids and can be obtained using the Mining Laser Beta.
+                They are used in various kinds of technology, ship components and hulls.
+            </Description>
+            <Size>5</Size>
+            <Price>200.0</Price>
+        </ItemType>
+        <ItemType id="ice">
+            <DisplayName>Ice</DisplayName>
+            <Description>Frozen Water can occur everywhere in the universe, in some places more than in others. Crystals
+                can be collected with an Ice Scoop.
+            </Description>
+            <Size>5</Size>
+            <Price>5.0</Price>
+        </ItemType>
+        <ItemType id="plasma">
+            <DisplayName>Starseed Plasma</DisplayName>
+            <Size>2</Size>
+            <Price>80.0</Price>
+        </ItemType>
+        <ItemType id="water">
+            <DisplayName>Water</DisplayName>
+            <Description>During the early times of the populization of outer-planetary space, water was transported from
+                the planets to the factories. As the population grew and the demand of water rose, this method became
+                rather expensive. Luckily, there is plenty of ice available in outer space which, on the other hand,
+                first has to be purified in order to be drinkable.
+            </Description>
+            <Size>5</Size>
+            <Price>8.0</Price>
+        </ItemType>
+        <ItemType id="energy_cell">
+            <DisplayName>Energy Cell</DisplayName>
+            <Description>These universally standardised containers for energy are produced in Cell Manufactories. In
+                order to being used for other production lines, they must be charged at a Solar Cell Array first.
+            </Description>
+            <Size>1</Size>
+            <Price>4.0</Price>
+        </ItemType>
+        <ItemType id="charged_energy_cell">
+            <DisplayName>Charged Energy Cell</DisplayName>
+            <Description>Energy is needed by every station and comes in these standardised cells.</Description>
+            <Size>1</Size>
+            <Price>8.0</Price>
+        </ItemType>
+        <ItemType id="raw_food">
+            <DisplayName>Raw Food</DisplayName>
+            <Description>Crates of Raw Food contain various types of vegetables, meat and fruits.</Description>
+            <Size>1</Size>
+            <Price>3.0</Price>
+        </ItemType>
+        <ItemType id="food_ration">
+            <DisplayName>Food Ration</DisplayName>
+            <Description>Equally sized, ready-to-eat Rations are supplied by the stations to their employees.
+            </Description>
+            <Size>1</Size>
+            <Price>6.0</Price>
+        </ItemType>
+        <ItemType id="organic_waste">
+            <DisplayName>Organic Waste</DisplayName>
+            <Description>In spite of its name, Organic Waste is an important component of various synthetic
+                substances.
+            </Description>
+            <Size>3</Size>
+            <Price>3.0</Price>
+        </ItemType>
+        <ItemType id="fuel">
+            <DisplayName>Jump Fuel</DisplayName>
+            <Description>This fuel is used to power a ship&apos;s Jump Drive. One unit provides exactly the amount of
+                fuel
+                which is required to travel to an adjacent sector.
+            </Description>
+            <Size>10</Size>
+            <Price>30.0</Price>
+        </ItemType>
+        <ItemType id="biosynthetic_compounds">
+            <DisplayName>Bio-Synthetic Compounds</DisplayName>
+            <Size>5</Size>
+            <Price>80.0</Price>
+        </ItemType>
+        <ItemType id="fusion_chamber">
+            <DisplayName>Fusion Chamber</DisplayName>
+            <Size>12</Size>
+            <Price>500.0</Price>
+        </ItemType>
+        <ItemType id="refined_metals">
+            <DisplayName>Refined Metals</DisplayName>
+            <Size>5</Size>
+            <Price>40.0</Price>
+        </ItemType>
+        <ItemType id="mass_compression_unit">
+            <DisplayName>Mass Compression Unit</DisplayName>
+            <Description>All modern ships are equipped with Mass Compression Units. Greatly reducing a ship&apos;s mass,
+                large quantities of fuel for short-distance travel are not needed anymore, making Mass Compression Units
+                one of the greatest inventions of the last decades. Unfortunately, their production is very expensive.
+                By creating large amounts of negative energy to reduce the mass, they are also likely to cause an
+                integer underflow which is why compressing too much mass results in a sudden release of energy, to the
+                disfavor of the pilot&apos;s health.
+            </Description>
+            <Size>50</Size>
+            <Price>6000.0</Price>
+        </ItemType>
+        <ItemType id="shield_generator">
+            <DisplayName>Shield Generator</DisplayName>
+            <Description>Shields not only safe a ship from instant destruction when being attacked, they also repel tiny
+                meteorites which can cause a noticable damage to the ship&apos;s resale value.
+            </Description>
+            <Size>40</Size>
+            <Price>2000.0</Price>
+        </ItemType>
+        <ItemType id="jump_drive_components">
+            <DisplayName>Jump Drive Components</DisplayName>
+            <Description>Space is big and life is short. That is why Jump Drives were invented. They save pilots from
+                the durations and risks of long-distance travel, making adventuring fun again. Every Jump consumes
+                exactly one unit of fuel.
+            </Description>
+            <Size>60</Size>
+            <Price>1100.0</Price>
+        </ItemType>
+        <ItemType id="shield_penetration_laser">
+            <DisplayName>Shield Penetration Laser</DisplayName>
+            <Description>Every ship is shipped with a Shield Penetration Laser (SPL) for self-defense. SPLs disable an
+                enemy&apos;s shield much faster than usual Lasers, but do not cause actual harm to other ships.
+            </Description>
+            <Size>80</Size>
+            <Price>1300.0</Price>
+        </ItemType>
+        <ItemType id="engine_components">
+            <DisplayName>Engine Components</DisplayName>
+            <Description>Engines have not evolved much since the beginning of space-travel. Due to the Mass Compression
+                Units, engines do not have to provide as much force as fifty years ago, but they still do their job
+                satisfactorily.
+            </Description>
+            <Size>30</Size>
+            <Price>400.0</Price>
+        </ItemType>
+        <ItemType id="metal_platings">
+            <DisplayName>Reinforced Metal Platings</DisplayName>
+            <Description>Metal Platings are mainly used for hulls of ships, drones and stations. They are basically
+                Common Metals, reinforced with Precious Metals.
+            </Description>
+            <Size>20</Size>
+            <Price>300.0</Price>
+        </ItemType>
+        <ItemType id="heavy_laser">
+            <DisplayName>Heavy Laser</DisplayName>
+            <Description>These lasers are used by drones to destory their target&apos;s hull.</Description>
+            <Size>80</Size>
+            <Price>1500.0</Price>
+        </ItemType>
+        <ItemType id="computer_components">
+            <DisplayName>Computer Components</DisplayName>
+            <Description>Computers have a lot of possible applications.</Description>
+            <Size>10</Size>
+            <Price>100.0</Price>
+        </ItemType>
+        <ItemType id="plasma_collection_system">
+            <DisplayName>Plasma Collection System</DisplayName>
+            <Size>80</Size>
+            <Price>8000.0</Price>
+        </ItemType>
+        <ItemType id="ice_scoop">
+            <DisplayName>Ice Scoop</DisplayName>
+            <Size>80</Size>
+            <Price>1200.0</Price>
+        </ItemType>
+        <ItemType id="mining_laser_alpha">
+            <DisplayName>Mining Laser Alpha</DisplayName>
+            <Size>80</Size>
+            <Price>1500.0</Price>
+        </ItemType>
+        <ItemType id="mining_laser_beta">
+            <DisplayName>Mining Laser Beta</DisplayName>
+            <Size>80</Size>
+            <Price>6800.0</Price>
+        </ItemType>
+    </ItemTypes>
+</TypeDefinitions>

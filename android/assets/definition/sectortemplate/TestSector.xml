@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ This file is part of OpenSpaceBox.
+  ~ Copyright (C) 2019 by Yuri Becker <hi@yuri.li>
+  ~
+  ~ OpenSpaceBox is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ OpenSpaceBox is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with OpenSpaceBox.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<SectorTemplate id="test_sector">
+    <Dimensions xMin="-30" yMin="-30" xMax="30" yMax="30"/>
+    <Background textureAsset="BACKGROUND_DARKPURPLE" width="256" height="256"/>
+    <Stations>
+        <Station stationType="solar_cell_array" x="-1777" y="1020" rotation="345" faction="faction_001"/>
+        <Station stationType="cell_manufactory" x="766" y="-816" rotation="107" faction="faction_001"/>
+        <Station stationType="solar_cell_array" x="1418" y="743" rotation="45" faction="faction_001">
+            <ItemsInCargo>
+                <ItemInCargo item="precious_metals" amount="10"/>
+                <ItemInCargo item="common_metals" amount="3"/>
+                <ItemInCargo item="ice" amount="5"/>
+                <ItemInCargo item="plasma" amount="6"/>
+                <ItemInCargo item="water" amount="7"/>
+                <ItemInCargo item="energy_cell" amount="2"/>
+                <ItemInCargo item="charged_energy_cell" amount="10"/>
+                <ItemInCargo item="raw_food" amount="4"/>
+                <ItemInCargo item="food_ration" amount="2"/>
+                <ItemInCargo item="organic_waste" amount="1"/>
+                <ItemInCargo item="biosynthetic_compounds" amount="10"/>
+                <ItemInCargo item="refined_metals" amount="8"/>
+            </ItemsInCargo>
+        </Station>
+    </Stations>
+    <Ships>
+        <Ship shipType="test_ship_b" x="100" y="100" faction="faction_001">
+            <ItemsInCargo>
+                <ItemInCargo item="energy_cell" amount="20"/>
+                <ItemInCargo item="common_metals" amount="5"/>
+                <ItemInCargo item="fusion_chamber" amount="2"/>
+            </ItemsInCargo>
+        </Ship>
+        <Ship shipType="test_ship_a" x="0" y="0" faction="playerFaction">
+            <ItemsInCargo>
+                <ItemInCargo item="common_metals" amount="5"/>
+                <ItemInCargo item="water" amount="2"/>
+                <ItemInCargo item="charged_energy_cell" amount="10"/>
+            </ItemsInCargo>
+            <IsPlayer>true</IsPlayer>
+        </Ship>
+    </Ships>
+    <AsteroidRegions>
+        <AsteroidRegion spriteMatcher="PROP_ASTEROID_METEORBROWN.*">
+            <Dimensions xMin="-8000" yMin="-8000" xMax="8000" yMax="8000"/>
+            <Count min="1000" max="1000"/>
+            <RotationSpeed min="5" max="30"/>
+            <Size min="50.7" max="100"/>
+        </AsteroidRegion>
+        <AsteroidRegion spriteMatcher="PROP_ASTEROID_METEORGREY_TINY.*">
+            <Dimensions xMin="220" yMin="268" xMax="1085" yMax="1061"/>
+            <Count min="30" max="35"/>
+            <RotationSpeed min="3.8" max="6"/>
+            <Size min="10" max="50"/>
+        </AsteroidRegion>
+    </AsteroidRegions>
+    <SectorBeacons>
+        <SectorBeacon x="-400" y="600"/>
+    </SectorBeacons>
+</SectorTemplate>

@@ -1,0 +1,466 @@
+
+sprite.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+prop/asteroid/meteorBrown_big1
+  rotate: false
+  xy: 1600, 2
+  size: 101, 84
+  orig: 101, 84
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorBrown_med1
+  rotate: false
+  xy: 1994, 53
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorBrown_med3
+  rotate: false
+  xy: 2, 4
+  size: 45, 40
+  orig: 45, 40
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorBrown_small1
+  rotate: false
+  xy: 96, 16
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorBrown_small2
+  rotate: false
+  xy: 156, 18
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorBrown_tiny1
+  rotate: false
+  xy: 218, 26
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorBrown_tiny2
+  rotate: false
+  xy: 258, 29
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_big1
+  rotate: false
+  xy: 1703, 2
+  size: 101, 84
+  orig: 101, 84
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_med1
+  rotate: false
+  xy: 1994, 8
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_med2
+  rotate: false
+  xy: 49, 4
+  size: 45, 40
+  orig: 45, 40
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_small1
+  rotate: false
+  xy: 126, 16
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_small2
+  rotate: false
+  xy: 187, 18
+  size: 29, 26
+  orig: 29, 26
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_tiny1
+  rotate: false
+  xy: 238, 26
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_tiny2
+  rotate: false
+  xy: 276, 29
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+prop/asteroid/spaceMeteors
+  rotate: false
+  xy: 1384, 82
+  size: 214, 227
+  orig: 214, 227
+  offset: 0, 0
+  index: 3
+prop/asteroid/spaceMeteors
+  rotate: false
+  xy: 1600, 88
+  size: 220, 221
+  orig: 220, 221
+  offset: 0, 0
+  index: 4
+prop/asteroid/spaceMeteors
+  rotate: false
+  xy: 1822, 98
+  size: 215, 211
+  orig: 215, 211
+  offset: 0, 0
+  index: 1
+ship/black_a
+  rotate: false
+  xy: 1822, 3
+  size: 84, 93
+  orig: 84, 93
+  offset: 0, 0
+  index: -1
+ship/blue_a
+  rotate: false
+  xy: 1908, 3
+  size: 84, 93
+  orig: 84, 93
+  offset: 0, 0
+  index: -1
+station/factory
+  rotate: false
+  xy: 1384, 311
+  size: 620, 1735
+  orig: 620, 1735
+  offset: 0, 0
+  index: -1
+station/office
+  rotate: false
+  xy: 2, 46
+  size: 1380, 2000
+  orig: 1380, 2000
+  offset: 0, 0
+  index: -1
+
+sprite2.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+prop/asteroid/meteorBrown_big2
+  rotate: false
+  xy: 1204, 1945
+  size: 120, 98
+  orig: 120, 98
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorBrown_big3
+  rotate: false
+  xy: 502, 759
+  size: 89, 82
+  orig: 89, 82
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorBrown_big4
+  rotate: false
+  xy: 216, 745
+  size: 98, 96
+  orig: 98, 96
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_big2
+  rotate: false
+  xy: 2, 523
+  size: 120, 98
+  orig: 120, 98
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_big3
+  rotate: false
+  xy: 1942, 1961
+  size: 89, 82
+  orig: 89, 82
+  offset: 0, 0
+  index: -1
+prop/asteroid/meteorGrey_big4
+  rotate: false
+  xy: 1204, 1847
+  size: 98, 96
+  orig: 98, 96
+  offset: 0, 0
+  index: -1
+prop/asteroid/spaceMeteors
+  rotate: false
+  xy: 2, 623
+  size: 212, 218
+  orig: 212, 218
+  offset: 0, 0
+  index: 2
+ship/black_b
+  rotate: false
+  xy: 2, 417
+  size: 84, 104
+  orig: 84, 104
+  offset: 0, 0
+  index: -1
+ship/black_c
+  rotate: false
+  xy: 1204, 1636
+  size: 84, 103
+  orig: 84, 103
+  offset: 0, 0
+  index: -1
+ship/black_d
+  rotate: false
+  xy: 593, 759
+  size: 84, 82
+  orig: 84, 82
+  offset: 0, 0
+  index: -1
+ship/black_e
+  rotate: false
+  xy: 2, 2
+  size: 84, 97
+  orig: 84, 97
+  offset: 0, 0
+  index: -1
+ship/blue_b
+  rotate: false
+  xy: 216, 639
+  size: 84, 104
+  orig: 84, 104
+  offset: 0, 0
+  index: -1
+ship/blue_c
+  rotate: false
+  xy: 2, 206
+  size: 84, 103
+  orig: 84, 103
+  offset: 0, 0
+  index: -1
+ship/blue_d
+  rotate: false
+  xy: 679, 759
+  size: 84, 82
+  orig: 84, 82
+  offset: 0, 0
+  index: -1
+ship/blue_e
+  rotate: false
+  xy: 1512, 1946
+  size: 84, 97
+  orig: 84, 97
+  offset: 0, 0
+  index: -1
+ship/blue_f
+  rotate: false
+  xy: 1204, 1079
+  size: 75, 99
+  orig: 75, 99
+  offset: 0, 0
+  index: -1
+ship/blue_g
+  rotate: false
+  xy: 1204, 1522
+  size: 75, 112
+  orig: 75, 112
+  offset: 0, 0
+  index: -1
+ship/blue_h
+  rotate: false
+  xy: 937, 743
+  size: 75, 98
+  orig: 75, 98
+  offset: 0, 0
+  index: -1
+ship/blue_i
+  rotate: false
+  xy: 1326, 1952
+  size: 91, 91
+  orig: 91, 91
+  offset: 0, 0
+  index: -1
+ship/green_a
+  rotate: false
+  xy: 1770, 1950
+  size: 84, 93
+  orig: 84, 93
+  offset: 0, 0
+  index: -1
+ship/green_b
+  rotate: false
+  xy: 1204, 1741
+  size: 84, 104
+  orig: 84, 104
+  offset: 0, 0
+  index: -1
+ship/green_c
+  rotate: false
+  xy: 2, 101
+  size: 84, 103
+  orig: 84, 103
+  offset: 0, 0
+  index: -1
+ship/green_d
+  rotate: false
+  xy: 765, 759
+  size: 84, 82
+  orig: 84, 82
+  offset: 0, 0
+  index: -1
+ship/green_e
+  rotate: false
+  xy: 1598, 1946
+  size: 84, 97
+  orig: 84, 97
+  offset: 0, 0
+  index: -1
+ship/green_f
+  rotate: false
+  xy: 1204, 978
+  size: 75, 99
+  orig: 75, 99
+  offset: 0, 0
+  index: -1
+ship/green_g
+  rotate: false
+  xy: 1204, 1408
+  size: 75, 112
+  orig: 75, 112
+  offset: 0, 0
+  index: -1
+ship/green_h
+  rotate: false
+  xy: 1014, 743
+  size: 75, 98
+  orig: 75, 98
+  offset: 0, 0
+  index: -1
+ship/green_i
+  rotate: false
+  xy: 316, 750
+  size: 91, 91
+  orig: 91, 91
+  offset: 0, 0
+  index: -1
+ship/orange_f
+  rotate: false
+  xy: 1204, 877
+  size: 75, 99
+  orig: 75, 99
+  offset: 0, 0
+  index: -1
+ship/orange_g
+  rotate: false
+  xy: 1204, 1294
+  size: 75, 112
+  orig: 75, 112
+  offset: 0, 0
+  index: -1
+ship/orange_h
+  rotate: false
+  xy: 1091, 743
+  size: 75, 98
+  orig: 75, 98
+  offset: 0, 0
+  index: -1
+ship/red_a
+  rotate: false
+  xy: 1856, 1950
+  size: 84, 93
+  orig: 84, 93
+  offset: 0, 0
+  index: -1
+ship/red_b
+  rotate: false
+  xy: 2, 311
+  size: 84, 104
+  orig: 84, 104
+  offset: 0, 0
+  index: -1
+ship/red_c
+  rotate: false
+  xy: 124, 518
+  size: 84, 103
+  orig: 84, 103
+  offset: 0, 0
+  index: -1
+ship/red_d
+  rotate: false
+  xy: 851, 759
+  size: 84, 82
+  orig: 84, 82
+  offset: 0, 0
+  index: -1
+ship/red_e
+  rotate: false
+  xy: 1684, 1946
+  size: 84, 97
+  orig: 84, 97
+  offset: 0, 0
+  index: -1
+ship/red_f
+  rotate: false
+  xy: 88, 417
+  size: 75, 99
+  orig: 75, 99
+  offset: 0, 0
+  index: -1
+ship/red_g
+  rotate: false
+  xy: 1204, 1180
+  size: 75, 112
+  orig: 75, 112
+  offset: 0, 0
+  index: -1
+ship/red_h
+  rotate: false
+  xy: 88, 317
+  size: 75, 98
+  orig: 75, 98
+  offset: 0, 0
+  index: -1
+ship/red_i
+  rotate: false
+  xy: 1419, 1952
+  size: 91, 91
+  orig: 91, 91
+  offset: 0, 0
+  index: -1
+ship/yellow_i
+  rotate: false
+  xy: 409, 750
+  size: 91, 91
+  orig: 91, 91
+  offset: 0, 0
+  index: -1
+station/sector_beacon
+  rotate: false
+  xy: 2, 843
+  size: 1200, 1200
+  orig: 1200, 1200
+  offset: 0, 0
+  index: -1
+
+sprite3.png
+size: 1024,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+station/solar_plant
+  rotate: false
+  xy: 2, 2
+  size: 860, 1440
+  orig: 860, 1440
+  offset: 0, 0
+  index: -1
